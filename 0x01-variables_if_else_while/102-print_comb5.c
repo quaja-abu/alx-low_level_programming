@@ -29,8 +29,11 @@ int main(void)
 			putchar(' ');
 			putchar('0' + t3);
 			putchar('0' + t4);
-			putchar(',');
-			putchar(' ');
+			if (t1 != 9 || t2 != 8 || t3 != 9 || t4 != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
