@@ -3,8 +3,7 @@
 /**
  * main - Entry point
  * print alphabets in small and capital
- * Return - Always 0 (Success)
- * main return int
+ * Return: Always 0 (Success)
  */
 int main(void)
 {

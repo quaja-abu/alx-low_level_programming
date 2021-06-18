@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  * print characters of small letters a-z
- * Return - Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {

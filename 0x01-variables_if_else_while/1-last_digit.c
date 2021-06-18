@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  * find the last digit and check
- * Return - Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
