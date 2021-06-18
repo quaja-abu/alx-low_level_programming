@@ -4,8 +4,7 @@
 
 /**
  * main - Entry point
- * check last digit of a random number
- *
+ * find the last digit and check
  * Return - Always 0 (Success)
  */
 int main(void)
