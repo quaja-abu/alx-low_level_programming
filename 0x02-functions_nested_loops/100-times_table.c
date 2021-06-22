@@ -36,8 +36,4 @@ void print_times_table(int n)
 			printf("\n");
 		}
 	}
-	else
-	{
-		printf("number is less than 0 or greater than 15 try again \n");
-	}
 }
