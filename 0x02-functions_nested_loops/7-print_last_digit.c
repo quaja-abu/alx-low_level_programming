@@ -5,13 +5,19 @@
  * @c: integer argument of the function
  * Return: the value of last digit
  */
-int print_last_digit(int c)
+int print_last_digit(long int c)
 {
 	int last;
 
 	if (c < 0)
+	{
 		c = (-1) * c;
-	last = c % 10;
+		last = c % 10;
+	}
+	else
+	{
+		last = c % 10;
+	}
 	_putchar('0' + last);
 	return (last);
 }
