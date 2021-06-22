@@ -17,13 +17,20 @@ void times_table(void)
 		for (col = 0; col <= 9; col++)
 		{
 			res = row * col;
-			printf("%2d", res);
+			if (col == 0)
+			{
+				printf("%1d", res);
+			}
+			else
+			{
+				printf("%2d", res);
+			}
 			if (col < 9)
 			{
-				putchar(',');
-				putchar(' ');
+				printf(",");
+				printf("%c", ' ');
 			}
 		}
-		putchar('\n');
+		printf("\n");
 	}
 }
