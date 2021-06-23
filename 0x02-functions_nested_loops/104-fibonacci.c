@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-	long int i = 1;
-	long int j = 2;
+	unsigned long int i = 1;
+	unsigned long int j = 2;
 	unsigned long int sum = 0;
 	int count = 2;
 
 	sum = i + j;
-	printf("%ld%c%c%ld%c%c%lu%c%c", i, ',', ' ', j, ',', ' ', sum, ',', ' ');
+	printf("%lu%c%c%lu%c%c%lu%c%c", i, ',', ' ', j, ',', ' ', sum, ',', ' ');
 	while (count <= 95)
 	{
 		i = j;
