@@ -7,22 +7,24 @@
  */
 int main(void)
 {
-	int i = 1;
-	int j = 2;
-	int sum = 0;
+	long int i = 1;
+	long int j = 2;
+	long int sum = 0;
+	int count = 0;
 
 	sum = i + j;
-	printf("%d%c%c%d%c%c%d%c%c", i, ',', ' ', j, ',', ' ', sum, ',', ' ');
-	while (sum < 50)
+	printf("%ld%c%c%ld%c%c%ld%c%c", i, ',', ' ', j, ',', ' ', sum, ',', ' ');
+	while (count <= 46)
 	{
 		i = j;
 		j = sum;
 		sum = i + j;
-		printf("%d", sum);
-		if (sum <= 50)
+		printf("%ld", sum);
+		if (count < 46)
 		{
 			printf("%c%c", ',', ' ');
 		}
+		count++;
 	}
 	printf("\n");
 	return (0);
