@@ -19,10 +19,11 @@ int main(void)
 		j = sum;
 		sum = i + j;
 		printf("%d", sum);
-		if (i != 50)
+		if (sum <= 50)
 		{
 			printf("%c%c", ',', ' ');
 		}
 	}
 	printf("\n");
+	return (0);
 }
