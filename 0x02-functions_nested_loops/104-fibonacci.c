@@ -14,13 +14,13 @@ int main(void)
 
 	sum = i + j;
 	printf("%lu%c%c%lu%c%c%lu%c%c", i, ',', ' ', j, ',', ' ', sum, ',', ' ');
-	while (count <= 95)
+	while (count <= 96)
 	{
 		i = j;
 		j = sum;
 		sum = i + j;
 		printf("%lu", sum);
-		if (count < 95)
+		if (count < 96)
 		{
 			printf("%c%c", ',', ' ');
 		}
