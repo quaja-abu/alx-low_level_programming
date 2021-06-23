@@ -7,22 +7,22 @@
  */
 int main(void)
 {
-	long int i = 1;
-	long int j = 2;
-	long int sum = 0;
-	long int count = 0;
-	
+	int i = 1;
+	int j = 2;
+	int sum = 0;
+	int sumEven = 2;
+
 	sum = i + j;
-	while (count <= 4000000)
+	while (sum <= 4000000)
 	{
 		i = j;
 		j = sum;
 		sum = i + j;
-		if ((i % 2 == 0) && (j % 2 == 0))
+		if (sum % 2 == 0)
 		{
-			printf("%ld%c%ld%c%ld\n", i, '+', j, '=', sum);
+			sumEven += sum;
 		}
-	count++;	
 	}
+	printf("%d\n", sumEven);
 	return (0);
 }
