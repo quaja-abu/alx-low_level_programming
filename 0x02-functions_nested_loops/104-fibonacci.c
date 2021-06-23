@@ -10,17 +10,17 @@ int main(void)
 	unsigned long int i = 1;
 	unsigned long int j = 2;
 	unsigned long int sum = 0;
-	int count = 2;
+	int count = 0;
 
 	sum = i + j;
 	printf("%lu%c%c%lu%c%c%lu%c%c", i, ',', ' ', j, ',', ' ', sum, ',', ' ');
-	while (count <= 96)
+	while (count <= 94)
 	{
 		i = j;
 		j = sum;
 		sum = i + j;
 		printf("%lu", sum);
-		if (count < 96)
+		if (count < 94)
 		{
 			printf("%c%c", ',', ' ');
 		}
