@@ -11,18 +11,22 @@ void print_triangle(int size)
 	int j;
 	int k;
 
-	for (i = 1; i <= size; i++)
+	if (size <= 0)
 	{
-		for (j = i; j < size; j++)
+		_putchar('\n');
+	}
+	else
+	{
+		for (i = 1; i <= size; i++)
 		{
-			_putchar(' ');
-		}
-		for (k = 1; k <= i; k++)
-		{
-			_putchar('#');
-		}
-		if (i <= size)
-		{
+			for (j = i; j < size; j++)
+			{
+				_putchar(' ');
+			}
+			for (k = 1; k <= i; k++)
+			{
+				_putchar('#');
+			}
 			_putchar('\n');
 		}
 	}
