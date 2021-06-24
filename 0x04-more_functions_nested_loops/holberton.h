@@ -10,6 +10,7 @@
  * print_most_numbers - prints numbers 0 to 9 except 2 and 4
  * more_numbers - prints numbers 0 to 14 ten times
  * print_line - drwaws a stright line in the terminal
+ * print_diagonal - print \ line 
  */
 
 int _putchar(char);
@@ -20,5 +21,6 @@ void print_numbers(void);
 void print_most_numbers(void);
 void more_numbers(void);
 void print_line(int n);
+void print_diagonal(int n);
 
 #endif	/* HOLBERTON_H */
