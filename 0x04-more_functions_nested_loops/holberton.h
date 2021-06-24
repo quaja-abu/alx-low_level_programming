@@ -3,10 +3,14 @@
 
 /*
  * _putchar - function to print characters
+ * _isupper - function to check uppercase
+ * _isdigit - funciton to digit or not
+ * mul - function that multiplies two integers
  */
 
 void _putchar(char);
 int _isupper(int c);
 int _isdigit(int c);
+int mul(int a, int b);
 
 #endif	/* HOLBERTON_H */
