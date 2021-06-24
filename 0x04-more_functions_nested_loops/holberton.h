@@ -6,6 +6,9 @@
  * _isupper - function to check uppercase
  * _isdigit - funciton to digit or not
  * mul - function that multiplies two integers
+ * print_numbers - print numbers 0 to 9
+ * print_most_numbers - prints numbers 0 to 9 except 2 and 4
+ * more_numbers - prints numbers 0 to 14 ten times
  */
 
 int _putchar(char);
@@ -14,5 +17,6 @@ int _isdigit(int c);
 int mul(int a, int b);
 void print_numbers(void);
 void print_most_numbers(void);
+void more_numbers(void);
 
 #endif	/* HOLBERTON_H */
