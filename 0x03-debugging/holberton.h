@@ -5,6 +5,7 @@
 
 /*
  * positive_or_negative - function prototype
+ * largets_number - find the largets of 3 numbers
  */
 
 int positive_or_negative(int i);
