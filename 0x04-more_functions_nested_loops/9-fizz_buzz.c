@@ -25,7 +25,10 @@ int main(void)
 		else if (i % 5 == 0)
 		{
 			printf("Buzz");
-			printf(" ");
+			if (i < 100)
+			{
+				printf(" ");
+			}
 		}
 		else
 		{
