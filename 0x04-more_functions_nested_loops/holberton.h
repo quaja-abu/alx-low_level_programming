@@ -11,7 +11,8 @@
  * more_numbers - prints numbers 0 to 14 ten times
  * print_line - drwaws a stright line in the terminal
  * print_diagonal - print \ line
- * print_square - prints a square 
+ * print_square - prints a square
+ * print_triangle - prnts a triangle 
  */
 
 int _putchar(char);
@@ -24,5 +25,6 @@ void more_numbers(void);
 void print_line(int n);
 void print_diagonal(int n);
 void print_square(int size);
+void print_triangle(int size);
 
 #endif	/* HOLBERTON_H */
