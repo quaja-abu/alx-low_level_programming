@@ -13,6 +13,7 @@
  * print_diagonal - print \ line
  * print_square - prints a square
  * print_triangle - prnts a triangle
+ * print_number - print any nubmber using _putchar
  */
 
 int _putchar(char);
@@ -26,5 +27,6 @@ void print_line(int n);
 void print_diagonal(int n);
 void print_square(int size);
 void print_triangle(int size);
+void print_number(int n);
 
 #endif	/* HOLBERTON_H */
