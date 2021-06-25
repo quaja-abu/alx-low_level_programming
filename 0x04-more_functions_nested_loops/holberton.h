@@ -12,7 +12,7 @@
  * print_line - drwaws a stright line in the terminal
  * print_diagonal - print \ line
  * print_square - prints a square
- * print_triangle - prnts a triangle 
+ * print_triangle - prnts a triangle
  */
 
 int _putchar(char);
