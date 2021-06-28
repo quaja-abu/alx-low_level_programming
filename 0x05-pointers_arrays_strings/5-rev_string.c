@@ -19,10 +19,11 @@ void rev_string(char *s)
 		count++;
 		i++;
 	}
-	while (k <= count)
+	while (k < i)
 	{
 		count--;
 		*(ptr + j) = *(s + count);
 		j++;
+		k++;
 	}
 }
