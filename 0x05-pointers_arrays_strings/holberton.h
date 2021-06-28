@@ -10,6 +10,7 @@
  * print_rev - function that prints string in reverse 
  * rev_sting - function that reverse a string
  * puts2 - function that prints other character of a string
+ * puts_half - function that prints half of a string
  */
 int _putchar(char c);
 void reset_to_98(int *n);
@@ -19,5 +20,6 @@ void _puts(char *str);
 void print_rev(char *s);
 void rev_string(char *s);
 void puts2(char *str);
+void puts_half(char *str);
 
 #endif /* HOLBERTON_H */
