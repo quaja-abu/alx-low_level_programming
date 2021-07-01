@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ * _strcmp - function to compare two strings
+ * @s1: character pointer
+ * @s2: character pointer
+ * Return: integer value greater than zero, less than zero or zero
+ */
+
 int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
