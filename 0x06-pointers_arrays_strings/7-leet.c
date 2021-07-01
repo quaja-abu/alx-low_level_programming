@@ -9,40 +9,25 @@
 
 char *leet(char *s)
 {
-	int i;
-	int j;
-	int k;
-	int index = 0;
-	int flag;
+	int i = 0;
+	int j = 0;
 
-	char leet1[] = {'a', 'e', 'o', 't', 'l'};
-	char leet2[] = {'A', 'E', 'O', 'T', 'L'};
-	char leet3[] = {'4', '3', '0', '7', '1'};
-	char temp;
+	char *l = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *leet = "4BCD3FGHIJK1MN0PQRS7UVWXYZ4bcd3fghijk1mn0pqrs7uvwxyz";
 
-	while (s[index] != '\0')
+	while (s[i] != '\0')
 	{
-		temp = s[index];
-		i = 0;
-		j = 0;
-		k = 0;
-		flag = 1;
-		while (flag)
+		while (l[j] != '\0')
 		{
-			if ((temp == leet1[i]) || (temp == leet2[j]))
+			if (s[i] == l[j])
 			{
-				temp = leet3[k];
-				/*s[index] = temp;*/
-				flag = 0;
+				s[i] = leet[j];
 				break;
 			}
-			temp = s[index];
-			i++;
 			j++;
-			k++;
 		}
-		s[index] = temp;
-		index++;
+		j = 0;
+		i++;
 	}
 	return (s);
 }
