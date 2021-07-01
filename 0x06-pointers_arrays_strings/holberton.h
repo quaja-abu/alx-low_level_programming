@@ -5,12 +5,13 @@
  * _putchar - function for printing character
  * _strcat - function to concatinate two strings
  * _strncat - function to concatinate two string at most n size
- * _strncpy - function to copy a string 
+ * _strncpy - function to copy a string
  * _strcmp - function to compare two strings
  * reverse_array - function that reverse the content of an array of integers
  * string_toupper - function to convert lowercase strings to uppercase
  * cap_string - function that capitalize all words of a string
  * leet - encoding a string into 1337
+ * rot13 - function that encodes a string using rot13
  */
 
 int _putchar(char *s);
@@ -22,5 +23,6 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
+cahr *rot13(char *);
 
 #endif /* HOLBERTON_H */
