@@ -24,7 +24,7 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[j] = src[j];
 		if (lens < n && j == lens)
 		{
-			dest[j - 1] = '\0';
+			dest[j] = '\0';
 			break;
 		}
 		j++;
