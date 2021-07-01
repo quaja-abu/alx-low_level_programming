@@ -16,6 +16,7 @@ int _strcmp(char *s1, char *s2)
 	int lens = 0;
 	int lend = 0;
 	int val = 0;
+
 	while (s1[j] != '\0')
 	{
 		lens++;
@@ -32,7 +33,7 @@ int _strcmp(char *s1, char *s2)
 		{
 			if (lens == lend)
 			{
-				sw = 0;
+				break;
 			}
 			continue;
 			i++;
