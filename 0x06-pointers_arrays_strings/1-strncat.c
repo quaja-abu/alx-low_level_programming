@@ -31,7 +31,7 @@ char *_strncat(char *dest, char *src, int n)
 		dest[lend] = src[j];
 		j++;
 		lend++;
-		if (j == lens)
+		if (j == (lens + 1))
 		{
 			break;
 		}
