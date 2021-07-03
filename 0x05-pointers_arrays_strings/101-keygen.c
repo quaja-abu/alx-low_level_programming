@@ -12,14 +12,13 @@ void randomPasswordGeneration(void)
 {
 	int i = 0;
 	int randomizer = 0;
+	char *numbers = "012345789";
+	char *letter = "abcdefghijklmnopqrstuvwxyz";
+	char *LETTER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *symbols = "!@#$^&*?";
+	char *password = "";
 
 	srand((unsigned int) (time(NULL)));
-
-	char numbers[] = "012345789";
-	char letter[] = "abcdefghijklmnopqrstuvwxyz";
-	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char symbols[] = "!@#$^&*?";
-	char password[10];
 
 	randomizer = rand() % 4;
 
