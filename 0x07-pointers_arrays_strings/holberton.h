@@ -8,6 +8,7 @@
   * _strspn - a function that gets length of a prefix substring
   * _strpbrk - funciton to locate the first occurrence in the string
   * _strstr - funciton that locates a substring
+  * print_chessboard - function that prints the chessboard
   */
 
 int _putchar(char );
@@ -17,5 +18,6 @@ char *_strchr(char *, char );
 unsigned int _strspn(char *, char *);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *, char *);
+void print_chessboard(char (*)[8]);
 
 #endif /* _HOLBERTON_H */
