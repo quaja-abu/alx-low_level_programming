@@ -1,4 +1,5 @@
 #include "holberton.h"
+int checkAgain(char *, char *);
 
 /**
   * is_palindrome - function to check the string is palindrome or not
@@ -6,26 +7,44 @@
   *
   * Return: 1 is a string is a plaindrome and 0 if not
   */
+
 int is_palindrome(char *s)
 {
-	int i = 0;
-	int j = 0;
-	char *p = s;
-	char *pal = "";
+	char *ptr = s;
+	char *rev;
+	int n;
 
-	if (s[i] != '\0')
+	if (*ptr != '\0')
 	{
-		++i;
-		is_palindrome(&s[i]);
-		pal[j] = s[--i];
-		j++;
+		++ptr;
+		is_palindrome(ptr);
 	}
-	if (pal == p)
+	--ptr;
+	rev = s;
+	n = checkAgain(rev, ptr);
+	return (n);
+}
+/**
+  * checkAgain - function for cross check
+  * @rev: character pointer
+  * @ptr: character pointer
+  *
+  * Return: interger value
+  */
+
+int checkAgain(char *rev, char *ptr)
+{
+	if (ptr >= rev)
 	{
+		if (*ptr == *rev)
+		{
+			--ptr;
+			rev++;
+		}
+		checkAgain(rev, ptr);
+	}
+	if (rev > ptr)
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }
