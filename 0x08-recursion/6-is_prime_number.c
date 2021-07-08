@@ -1,29 +1,42 @@
 #include "holberton.h"
+int checkAgain(int num, int);
 
 /**
-  * is_prime_number - function that check prime number
-  * @n: integer numbert to be checked
+  * is_prime_number - function to check a number is prime or not
+  * @n: integer number to be checked
   *
-  * Return: 1 if the integer is a prime or 0 otherwise
+  * Return: integer value
   */
-
 int is_prime_number(int n)
 {
-	if (n == 1)
-	{
-		return (0);
-	}
-	if (n == 2)
+	int val;
+	int div = 2;
+
+	val = checkAgain(n, div);
+	if (val == 1)
 	{
 		return (1);
 	}
-	if ((1 / n) % n == 0)
+	else
 	{
 		return (0);
 	}
-	if (n / n == 1)
-	{
-		return (is_prime_number(n - 1 + 1 / n));
-	}
-	return (is_prime_number(n - 1));
+}
+/**
+  * checkAgain - function to be called by is_prime_number
+  * @num: integer number to be cheked
+  * @div: integer divisor
+  *
+  * Return: integer 0 or 1
+  */
+
+int checkAgain(int num, int div)
+{
+	if (num <= 2)
+		return ((num == 2) ? 1 : 0);
+	if (num % div == 0)
+		return (0);
+	if (div * div > num)
+		return (1);
+	return (checkAgain(num, div + 1));
 }
