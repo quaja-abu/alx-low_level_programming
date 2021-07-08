@@ -1,50 +1,69 @@
 #include "holberton.h"
-int checkAgain(char *, char *);
+int _strlen(char *s);
+int _checkPalindrome(char *, int, int);
 
 /**
-  * is_palindrome - function to check the string is palindrome or not
+  * is_palindrome - function to check a string is palindrome or not
   * @s: character pointer
   *
-  * Return: 1 is a string is a plaindrome and 0 if not
+  * Return: 1 if it is palindrome 0 otherwise
   */
-
 int is_palindrome(char *s)
 {
-	char *ptr = s;
-	char *rev;
-	int n;
+	int val;
+	int len;
 
-	if (*ptr != '\0')
+	len = _strlen(s);
+	len = len - 1;
+	val = _checkPalindrome(s, 0, len);
+
+	if (val == 1)
 	{
-		++ptr;
-		is_palindrome(ptr);
+		return (val);
 	}
-	--ptr;
-	rev = s;
-	n = checkAgain(rev, ptr);
-	return (n);
+	else
+	{
+		return (val);
+	}
+
 }
 /**
-  * checkAgain - function for cross check
-  * @rev: character pointer
-  * @ptr: character pointer
+  * _strlen - function to calculate string lenght
+  * @s: character pointer
   *
-  * Return: interger value
+  * Return: integer value
   */
-
-int checkAgain(char *rev, char *ptr)
+int _strlen(char *s)
 {
-	if (ptr >= rev)
+	int i = 0;
+
+	while (s[i] != '\0')
 	{
-		if (*ptr == *rev)
-		{
-			--ptr;
-			rev++;
-		}
-		checkAgain(rev, ptr);
+		i++;
 	}
-	if (rev > ptr)
-		return (1);
-	else
+	return (i);
+}
+/**
+  * _checkPalindrome - function to check a string is palindrome or not
+  * @s: character pointer
+  * @i: integer value
+  * @j: integer value
+  *
+  * Return: 1 or 0
+  */
+int _checkPalindrome(char *s, int i, int j)
+{
+	if (i < 0 || j < 0)
+	{
 		return (0);
+	}
+	if (i >= j)
+	{
+		return (1);
+	}
+	if (s[i] == s[j])
+	{
+		return (_checkPalindrome(s, i + 1, j - 1));
+	}
+	return (0);
 }
