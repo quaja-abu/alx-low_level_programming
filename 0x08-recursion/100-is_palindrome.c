@@ -40,7 +40,7 @@ int _strlen(char *s)
 	if (s[i] != '\0')
 	{
 		i++;
-		_strlen(&s[i]);
+		i += _strlen(&s[i]);
 	}
 	return (i);
 }
