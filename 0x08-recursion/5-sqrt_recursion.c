@@ -1,26 +1,36 @@
 #include "holberton.h"
-
+int func(int, int);
 /**
-  * _sqrt_recursion - function that returns the natural square root
+  * _sqrt_recursion - funciton to find the square root of a number
   * @n: integer value
   *
-  * Return: -1 if n does not have natural square root
+  * Return: 1 or 0 or -1
   */
+
 int _sqrt_recursion(int n)
 {
-	int sqrt = 1;
-	int cntr = 1;
+	int root = 0;
 	int output;
 
-	if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-	else if (sqrt <= n)
-	{
-		cntr++;
-		sqrt = _sqrt_recursion(cntr * cntr);
-	}
-	output = cntr - 1;
+	output = func(n, root);
 	return (output);
+
+/**
+  * func - function to be called by _sqrt_recursion
+  * @square: integer value
+  * @root: integer value
+  *
+  * Return: integer value
+  */
+int func(int square, int root)
+{
+	if (root * root == square)
+	{
+		return (root);
+	}
+	if (root * root > square)
+	{
+		return (-1);
+	}
+	return (func(square, root + 1));
 }
