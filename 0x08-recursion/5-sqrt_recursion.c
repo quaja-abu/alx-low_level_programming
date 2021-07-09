@@ -14,7 +14,7 @@ int _sqrt_recursion(int n)
 
 	output = func(n, root);
 	return (output);
-
+}
 /**
   * func - function to be called by _sqrt_recursion
   * @square: integer value
