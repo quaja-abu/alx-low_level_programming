@@ -4,27 +4,19 @@
 /**
   * _strchr - function that locates a character in a string
   * @s: character pointer that holds the string
-  * @c: character value to be located in the string
+  * @c: integer value to be located in the string
   *
   * Return: character pointer
   */
 
-char *_strchr(char *s, char c)
+char *_strchr(char *s, int c)
 {
-	int i = 0;
-	char *p = s;
-
-	while (*s != c)
+	for (;; s++)
 	{
-		++s;
-		++i;
+		if (*s == c)
+			return (s);
+		if (!*s)
+			return (NULL);
 	}
-	if (*s == c)
-	{
-		return (p + i);
-	}
-	else
-	{
-		return (NULL);
-	}
+	return (NULL);
 }
