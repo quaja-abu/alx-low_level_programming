@@ -24,18 +24,19 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		s = malloc(sizeof(char) * size);
+		s = malloc(sizeof(char) * size + sizeof(char));
 		if (s == NULL)
 		{
 			return (NULL);
 		}
 		else
 		{
-			while (i <= size)
+			while (i < size)
 			{
 				s[i] = str[i];
 				i++;
 			}
+			s[i] = '\0';
 		}
 	}
 	return (s);
