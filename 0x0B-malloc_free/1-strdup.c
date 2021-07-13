@@ -31,7 +31,7 @@ char *_strdup(char *str)
 		}
 		else
 		{
-			while (i < size)
+			while (i <= size)
 			{
 				s[i] = str[i];
 				i++;
