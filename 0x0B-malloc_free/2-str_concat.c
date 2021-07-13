@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 		size2++;
 		k++;
 	}
-	sizet = size1 + size2;
+	sizet = size1 + size2 + sizeof(char) ;
 	if (s1 == NULL || s2 == NULL)
 	{
 		return (NULL);
@@ -49,6 +49,7 @@ char *str_concat(char *s1, char *s2)
 			i++;
 			l++;
 		}
+		s[sizet - 1] = '\0';
 	}
 	return (s);
 }
