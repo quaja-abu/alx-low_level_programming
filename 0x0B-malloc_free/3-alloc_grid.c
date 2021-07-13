@@ -4,8 +4,8 @@
 
 /**
   * alloc_grid - function that returns a pointer to a 2 dimensional array
-  * @width: integer value
-  * @height: integer value
+  * @row: integer value
+  * @col: integer value
   *
   * Return: integer pointer
   */
@@ -21,12 +21,9 @@ int **alloc_grid(int row, int col)
 	}
 	else
 	{
-		ptr = (int**)malloc(sizeof(int*) * row);
-	
+		ptr = (int **)malloc(sizeof(int *) * row);
 		for (i = 0; i < row; i++)
-		{
-			*(ptr + i) = (int*)malloc(sizeof(int) * col);
-		}
+			*(ptr + i) = (int *)malloc(sizeof(int) * col);
 		for (i = 0; i < row; i++)
 		{
 			for (j = 0; j < col; j++)
@@ -36,4 +33,5 @@ int **alloc_grid(int row, int col)
 	for (i = 0; i < row; i++)
 		free(ptr[i]);
 	return (ptr);
+	free(ptr);
 }
