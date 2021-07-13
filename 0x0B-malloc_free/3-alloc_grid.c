@@ -9,27 +9,31 @@
   *
   * Return: integer pointer
   */
-int **alloc_grid(int width, int height)
+int **alloc_grid(int row, int col)
 {
 	int **ptr;
-	int w;
-	int h;
+	int i;
+	int j;
 
-	if (width <= 0 || height <= 0)
+	if (row <= 0 || col <= 0)
 	{
 		return (NULL);
 	}
 	else
 	{
-		ptr = malloc(10496);
-		for (h = 0; h < height; h++)
+		ptr = (int**)malloc(sizeof(int*) * row);
+	
+		for (i = 0; i < row; i++)
 		{
-			for (w = 0; w < width; w++)
-			{
-				ptr[h][w] = 0;
-			}
+			*(ptr + i) = (int*)malloc(sizeof(int) * col);
+		}
+		for (i = 0; i < row; i++)
+		{
+			for (j = 0; j < col; j++)
+				ptr[i][j] = 0;
 		}
 	}
-	free(ptr);
+	for (i = 0; i < row; i++)
+		free(ptr[i]);
 	return (ptr);
 }
