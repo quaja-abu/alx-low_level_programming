@@ -20,11 +20,7 @@ char *str_concat(char *s1, char *s2)
 	int i = 0;
 	int j = 0;
 
-	if ((s1 == (char *)NULL))
-	{
-		return (NULL);
-	}
-	else if (s2 == (char *)NULL)
+	if ((s1 == (char *)NULL) && (s2 == (char *)NULL))
 	{
 		return (NULL);
 	}
@@ -70,11 +66,14 @@ char *concat(char *s, char *s1, char *s2, int sizet, int size1, int i, int j)
 		s[i] = s1[i];
 		i++;
 	}
-	while (i < sizet)
+	if (s2 != (char *)NULL)
 	{
-		s[i] = s2[j];
-		i++;
-		j++;
+		while (i < sizet)
+		{
+			s[i] = s2[j];
+			i++;
+			j++;
+		}
 	}
 	s[i] = '\0';
 	return (s);
