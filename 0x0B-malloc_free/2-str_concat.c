@@ -48,6 +48,7 @@ char *str_concat(char *s1, char *s2)
 		}
 	}
 	val = concat(s, s1, s2, sizet, size1, i, j);
+	free(val);
 	return (val);
 }
 
