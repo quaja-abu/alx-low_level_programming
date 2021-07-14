@@ -1,4 +1,4 @@
-/**
+ /*
   * File: 4-free_grid.c
   * Author: Bantegize Addis
   */
