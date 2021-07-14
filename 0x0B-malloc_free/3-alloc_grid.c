@@ -12,7 +12,7 @@ int **assign(int **arr, int m, int n);
 int **alloc_grid(int row, int col)
 {
 	int **ptr;
-	int i;
+	int i, j;
 
 	if (row <= 0 || col <= 0)
 	{
@@ -20,34 +20,30 @@ int **alloc_grid(int row, int col)
 	}
 	else
 	{
-		ptr = (int **)malloc(sizeof(int *) * row);
-		*ptr = (int *)malloc(sizeof(int) * row * col);
-		for (i = 0; i < row; i++)
-			ptr[i] = (*ptr + col * i);
-		ptr = assign(ptr, row, col);
-	}
-	free(*ptr);
-	return (ptr);
-}
-/**
-  * assign - function called by above function
-  * @arr: integer pointer of pointer
-  * @m: integer value
-  * @n: integer value
-  *
-  * Return: integer pointer of pointer
-  */
-int **assign(int **arr, int m, int n)
-{
-	int i;
-	int j;
+		ptr = malloc(sizeof(int *) * col);
 
-	for (i = 0; i < m; i++)
-	{
-		for (j = 0; j < n; j++)
+		if (ptr == NULL)
+			return (NULL);
+
+		for (i = 0; i < col; i++)
 		{
-			*(*(arr + i) + j) = 0;
+			ptr[i] = malloc(sizeof(int) * row);
+			if (ptr[i] == NULL)
+			{
+				for (; i >= 0; i--)
+					free(ptr[i]);
+				free(ptr);
+				return (NULL);
+			}
+		}
+
+		for (i = 0; i < col; i++)
+		{
+			for (j = 0; j < row; j++)
+			{
+				ptr[i][j] = 0;
+			}
 		}
 	}
-	return (arr);
+	return (ptr);
 }
