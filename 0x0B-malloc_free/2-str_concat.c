@@ -22,8 +22,6 @@ char *str_concat(char *s1, char *s2)
 
 	if ((s1 == (char *)NULL) && (s2 == (char *)NULL))
 	{
-		s1 = "";
-		s2 = "";
 		return (val);
 	}
 	else
@@ -44,6 +42,10 @@ char *str_concat(char *s1, char *s2)
 		}
 		sizet = (size1 + size2 + sizeof(char));
 		s = malloc(sizeof(char) * sizet);
+		if (s == NULL)
+		{
+			return (NULL);
+		}
 	}
 	val = concat(s, s1, s2, sizet, size1, i, j);
 	return (val);
