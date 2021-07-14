@@ -13,7 +13,7 @@ char *concat(char *, char *, char *, int, int, int, int);
 char *str_concat(char *s1, char *s2)
 {
 	char *s;
-	char *val;
+	char *val = "";
 	int size1 = 0;
 	int size2 = 0;
 	int sizet;
@@ -24,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		s1 = "";
 		s2 = "";
-		return (s1);
+		return (val);
 	}
 	else
 	{
