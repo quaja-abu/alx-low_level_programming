@@ -19,7 +19,7 @@ int *array_range(unsigned int min, unsigned int max)
 {
 	int *ptr;
 	int size = 0;
-	
+
 	size = max - min;
 	if (min > max)
 		return (NULL);
