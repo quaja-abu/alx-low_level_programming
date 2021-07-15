@@ -17,6 +17,8 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *c;
+	char *cpymem;
+	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -24,6 +26,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	c = malloc(size * nmemb);
 	if (c == NULL)
 		return (NULL);
+
+	cpymem = c;
+	
+	for (i = 0; i < (size * nmemb); i++)
+		cpymem[i] = '\0';
+
 	return (c);
 
 }
