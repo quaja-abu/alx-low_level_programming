@@ -5,7 +5,6 @@
 
 #include "holberton.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
   * _calloc - function that allocates memory for an array using malloc
@@ -18,7 +17,6 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *c;
-	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -26,8 +24,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	c = malloc(size * nmemb);
 	if (c == NULL)
 		return (NULL);
-	for (i = 0; i < nmemb; i++)
-		memset(c, 0, size);
 	return (c);
 
 }
