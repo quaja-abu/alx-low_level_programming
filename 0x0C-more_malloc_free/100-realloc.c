@@ -20,24 +20,37 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *ptrnw;
+	char *ptrcpy, *ptrprev;
+	unsigned int i;
 
 	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	else if (ptr == NULL)
+	if (ptr == NULL)
 	{
 		ptrnw = malloc(new_size);
+		if (ptrnw == NULL)
+			return (NULL);
+		return (ptrnw);
 	}
-	else if (new_size <= old_size)
+	if (new_size <= old_size)
 	{
 		return (ptr);
 	}
-	else
+	ptrprev = ptr;
+	ptrnw = malloc(sizeof(*ptrprev) * new_size);
+	if (ptrnw == NULL)
 	{
-		ptrnw = malloc(new_size);
+		free(ptr);
+		return (NULL);
 	}
+	ptrcpy = ptrnw;
+	for (i = 0; i < old_size && i < new_size; i++)
+		ptrcpy[i] = *ptrprev++;
+
 	free(ptr);
 	return (ptrnw);
 }
+
