@@ -40,12 +40,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		str[size++] = s1[i];
 	if (n >= len)
 	{
-		for (i = 0; s2[i]; i++)
+		for (i = 0; i < n; i++)
 			str[size++] = s2[i];
 	}
 	else
 	{
-		for (i = 0; s2[i] && i < n; i++)
+		for (i = 0; i < n; i++)
 			str[size++] = s2[i];
 	}
 	str[size] = '\0';
