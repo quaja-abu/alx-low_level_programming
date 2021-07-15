@@ -10,6 +10,8 @@
 /**
  * malloc_checked - function that allocates memory using malloc
  * @b: unsigned integer value
+ *
+ * Return: pointer
  */
 void *malloc_checked(unsigned int b)
 {
