@@ -6,7 +6,6 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
   * array_range - function that creates an array of integers
@@ -18,8 +17,8 @@
 
 int *array_range(int min, int max)
 {
-	int *ptr;
-	int size = 0;
+	int *ptr, size = 0, i;
+	char ch = 'a';
 
 	size = max - min;
 	if (min > max)
@@ -28,5 +27,18 @@ int *array_range(int min, int max)
 
 	if (ptr == NULL)
 		return (NULL);
+	for (i = 0; i < size; i++)
+	{
+		if (i >= 10)
+		{
+			ptr[i] = ch;
+			ch++;
+		}
+		else
+		{
+			ptr[i] = min;
+		}
+		min++;
+	}
 	return (ptr);
 }
