@@ -1,9 +1,5 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
-/*
- * File: holberton.h
- * Author: Bantegize Addis
- */
 
 int _putchar(char);
 void *malloc_checked(unsigned int b);
