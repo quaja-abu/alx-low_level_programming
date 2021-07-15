@@ -17,27 +17,17 @@
 
 int *array_range(int min, int max)
 {
-	int *ptr, size = 0, i;
-	char ch = 'a';
-
-	size = max - min;
+	int *ptr, i, size;
 	if (min > max)
 		return (NULL);
-	ptr = malloc(sizeof(int *) * size);
+	size = max - min + 1;
+	ptr = malloc(sizeof(int) * size);
 
 	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; i < size; i++)
 	{
-		if (i >= 10)
-		{
-			ptr[i] = ch;
-			ch++;
-		}
-		else
-		{
-			ptr[i] = min;
-		}
+		ptr[i] = min;
 		min++;
 	}
 	return (ptr);
