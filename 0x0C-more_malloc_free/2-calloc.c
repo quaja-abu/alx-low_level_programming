@@ -30,7 +30,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	cpymem = c;
 
 	for (i = 0; i < (size * nmemb); i++)
-		cpymem[i] = '\0';
+		cpymem[i] = 0;
 
 	return (c);
 
