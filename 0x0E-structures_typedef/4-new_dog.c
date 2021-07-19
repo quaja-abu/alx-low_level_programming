@@ -8,11 +8,11 @@
   * @age: floating point value
   * @owner: character pointer
   *
-  * Return: dot_t value
+  * Return: dog_t pointer
   */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d = malloc(sizeof(dog_t));
+	dog_t *d = malloc(sizeof(dog_t) * 3);
 
 	if (d == NULL)
 		return (NULL);
