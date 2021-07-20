@@ -4,7 +4,7 @@
 
 /**
   * main - check the code
-  * @args: first integer value
+  * @argc: first integer value
   * @argv: character array
   *
   * Return: Always 0.
