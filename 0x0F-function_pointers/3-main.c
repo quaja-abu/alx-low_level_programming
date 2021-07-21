@@ -1,6 +1,4 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
   * main - check the code
@@ -13,20 +11,20 @@ int main(int argc, char *argv[])
 {
 	int val;
 
-	if (argc - 1 > 3)
+	if (argc - 1 > 3 || argc - 1 < 3)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (atoi(argv[2]) != '+' || atoi(argv[2]) != '-' ||
-			atoi(argv[2]) != '*' ||
-			atoi(argv[2]) != '/' ||
-			atoi(argv[2]) != '%')
+	if ((strcmp(argv[2], "+") == -1) || (strcmp(argv[2], "-") == -1) ||
+			(strcmp(argv[2], "*") == -1) ||
+			(strcmp(argv[2], "/") == -1) ||
+			(strcmp(argv[2], "%") == -1))
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((atoi(argv[2]) == '/' || atoi(argv[2]) == '%') &&
+	if ((strcmp(argv[2], "/") == 0 || (strcmp(argv[2], "%") == 0)) &&
 		atoi(argv[3]) == 0)
 	{
 		printf("Error\n");

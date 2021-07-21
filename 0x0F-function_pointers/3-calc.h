@@ -1,6 +1,9 @@
 #ifndef _CALCHEADER_H_
 #define _CALCHEADER_H_
-
+#include <stddef.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 /**
   * struct op - struct op
   * @op: the operator

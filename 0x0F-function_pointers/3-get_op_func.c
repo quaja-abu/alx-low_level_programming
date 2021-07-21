@@ -1,11 +1,10 @@
 #include "3-calc.h"
-#include <stddef.h>
 
 /**
   * get_op_func - function pointer that calls a function
   * @s: character pointer
   *
-  * Return: integer value
+  * Return: pointer to function
   */
 int (*get_op_func(char *s))(int a, int b)
 {
@@ -20,9 +19,9 @@ int (*get_op_func(char *s))(int a, int b)
 	int i;
 
 	i = 0;
-	while (i < 5)
+	while (i <= 5)
 	{
-		if (ops[i].op == s)
+		if (strcmp(ops[i].op, s) == 0)
 		{
 			return (ops[i].f);
 		}
